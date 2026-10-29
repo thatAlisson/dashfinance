@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashFinance - Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DashFinance 💰</h1>
+      <p>Gerencie suas finanças de forma simples e rápida</p>
+    </header>
+
+    <section class="summary">
+      <div class="card card-incomes">
+        <h3>Entradas</h3>
+        <p id="total-incomes">R$ 0,00</p>
+      </div>
+      <div class="card card-expenses">
+        <h3>Saídas</h3>
+        <p id="total-expenses">R$ 0,00</p>
+      </div>
+      <div class="card card-total">
+        <h3>Saldo Total</h3>
+        <p id="total-balance">R$ 0,00</p>
+      </div>
+    </section>
+
+    <section class="form-container">
+      <h2>Nova Transação</h2>
+      <form id="transaction-form">
+        <input type="text" id="desc" placeholder="Descrição (ex: Salário, Aluguel)" required />
+        <input type="number" id="amount" step="0.01" placeholder="Valor (ex: 150.00)" required />
+        <select id="type">
+          <option value="income">Entrada</option>
+          <option value="expense">Saída</option>
+        </select>
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="transactions-container">
+      <h2>Histórico</h2>
+      <ul id="transactions-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
